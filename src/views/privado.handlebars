@@ -1,0 +1,9 @@
+{{#if (session.role === 'admin')}}
+    <h2>Bienvenido, {{session.user}} (Rol: {{session.role}})</h2>
+    <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+{{else}}
+    <p>Debes iniciar sesión como administrador para ver esta página.</p>
+{{/if}}
+
